@@ -1,0 +1,73 @@
+/* --- Hero Section --- */
+  .hero {
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    padding: 6rem 1.5rem;
+    background: var(--bg-alt) url("https://source.unsplash.com/1600x900/?travel,car") no-repeat center center/cover;
+    background-blend-mode: multiply;
+  }
+  
+  .hero-inner {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-family: var(--font-serif);
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #ffffff;
+  }
+  
+  .hero-sub {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .hero-feature {
+    font-weight: 500;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+  }
+  
+  .btn-cta {
+    background-color: var(--secondary);
+    color: #111;
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+  }
+  
+  .btn-cta:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+    transform: translateY(-3px);
+  }
+  
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .mobile-nav {
+      display: none !important; /* Hide for a mobile menu implementation */
+    }
+  
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  }
+  

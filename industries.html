@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Industries We Serve — Ekips Transformers</title>
+  <meta name="description" content="Ekips Transformers provides solutions for a wide range of industries including utilities, renewable energy, and industrial manufacturing.">
+  <meta name="keywords" content="Transformer applications, industries served, power utilities, renewable energy transformers">
+  <link rel="icon" href="logo.jpg" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes animated-gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+    @keyframes float-hero {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+    }
+    .industries-hero {
+        padding: 3rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        color: #fff;
+        text-align: center;
+        background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #d4af37);
+        background-size: 400% 400%;
+        animation: animated-gradient 20s ease infinite;
+        overflow: hidden;
+    }
+    .industries-hero .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 900px;
+        animation: float-hero 6s ease-in-out infinite;
+    }
+    .industries-hero .pre-title {
+        display: inline-block;
+        background: rgba(212, 175, 55, 0.15);
+        padding: 0.5rem 1.5rem;
+        border-radius: 50px;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--primary);
+    }
+    .industries-hero h1 {
+        font-size: 3.5rem;
+        font-family: var(--font-serif);
+        text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    .industries-hero .lead {
+        font-size: 1.3rem;
+        max-width: 700px;
+        margin: 0.25rem auto 0.5rem;
+        opacity: 0.9;
+    }
+
+    /* Enhanced Card Styling */
+    .industry-card {
+        background: rgba(255, 255, 255, 0.02);
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .industry-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+        border-color: var(--primary);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+    .industry-card .card-icon {
+        transition: transform 0.5s ease, color 0.3s ease;
+    }
+    .industry-card:hover .card-icon {
+        transform: rotateY(180deg) scale(1.2);
+        color: var(--secondary);
+    }
+
+    @media (max-width: 768px) {
+        .industries-hero h1 { font-size: 2.2rem; }
+        .industries-hero { padding: 4rem 1rem; }
+    }
+  </style>
+</head>
+<body class="theme-professional">
+  <header class="site-header" data-aos="fade-down">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.jpg" alt="Ekips Transformers Logo" class="header-logo">
+        <div class="brand-info">
+          <span class="brand-name">Ekips Transformers</span>
+          <span class="brand-tagline">Trust & Efficiency</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="industries.html" class="active">Industries</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="request-quote.html" class="btn-nav">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-industries" style="background-image: url('https://source.unsplash.com/1600x900/?industrial,city,infrastructure');">
+      <div class="hero-content container" data-aos="fade-up">
+        <span class="pre-title">Our Expertise</span>
+        <h1>Powering Progress Across Key Sectors</h1>
+        <p class="hero-sub">Specialized transformer solutions engineered for the unique demands of diverse sectors.</p>
+        <a href="#industry-grid-section" class="btn-cta">Explore Sectors</a>
+      </div>
+    </section>
+
+    <section id="industry-grid-section" style="padding: 4rem 0; background-image: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);">
+      <div class="container">
+        <div class="industry-grid">
+
+          <article class="industry-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-arrow-up card-icon"></i>
+            <h3>Elevator Sector</h3>
+            <p>High-reliability transformers for passenger and freight elevators, including Lift UPS, ARD, and control transformers to ensure safety and seamless operation.</p>
+            <div class="related-products">
+              <h4>Relevant Products:</h4>
+              <ul>
+                <li>Lift UPS Transformers</li>
+                <li>UPS and ARD Transformers</li>
+                <li>Control Transformer</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="industry-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-solar-panel card-icon"></i>
+            <h3>Solar Power & Renewable Energy</h3>
+            <p>Efficient inverter transformers designed to convert DC power from solar panels into AC power for grid and off-grid applications.</p>
+            <div class="related-products">
+              <h4>Relevant Products:</h4>
+              <ul>
+                <li>Inverter Transformers</li>
+                <li>Sine Wave Transformers</li>
+                <li>Three Phase Transformers</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="industry-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-cogs card-icon"></i>
+            <h3>Industrial Automation & Manufacturing</h3>
+            <p>Robust transformers for industrial machinery, VFDs, PLCs, and control panels, ensuring stable power and protection against harmonics.</p>
+            <div class="related-products">
+              <h4>Relevant Products:</h4>
+              <ul>
+                <li>Control Transformers</li>
+                <li>Line Chokes</li>
+                <li>Three Phase Transformers</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="industry-card" data-aos="fade-up" data-aos-delay="400">
+            <i class="fas fa-bolt card-icon"></i>
+            <h3>Power & Utilities</h3>
+            <p>Dependable transformers for power distribution networks, substations, and utility infrastructure, built for efficiency and longevity.</p>
+            <div class="related-products">
+              <h4>Relevant Products:</h4>
+              <ul>
+                <li>Three Phase Transformers</li>
+                <li>Buck Boost Transformers</li>
+                <li>Auto Transformers</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="industry-card" data-aos="fade-up" data-aos-delay="500">
+            <i class="fas fa-building card-icon"></i>
+            <h3>Commercial & Residential Buildings</h3>
+            <p>Cost-effective solutions for building management systems, including HVAC controls, lighting, and general power distribution.</p>
+            <div class="related-products">
+              <h4>Relevant Products:</h4>
+              <ul>
+                <li>Buck Boost Transformers</li>
+                <li>Control Transformers</li>
+                <li>Auto Transformers</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="industry-card" data-aos="fade-up" data-aos-delay="600">
+            <i class="fas fa-server card-icon"></i>
+            <h3>Critical Power (UPS & Backup)</h3>
+            <p>UPS and ARD transformers that provide galvanic isolation and clean backup power for critical systems like data centers, medical equipment, and emergency lighting.</p>
+            <div class="related-products">
+              <h4>Relevant Products:</h4>
+              <ul>
+                <li>UPS and ARD Transformers</li>
+                <li>Isolation Transformer</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem; padding: 2.5rem; background: var(--bg-alt); border-radius: 15px; border: 1px solid var(--border);" data-aos="fade-up">
+            <h2 style="margin-bottom: 1rem; color: var(--heading);">Don't See Your Industry?</h2>
+            <p class="lead" style="margin-bottom: 2rem; color: var(--text-muted);">We build custom transformers for any application. Tell us your needs.</p>
+            <a href="request-quote.html" class="btn-cta">Request a Custom Quote</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col contact-col">
+          <h4>Contact Us</h4>
+          <address>Vatva, Ahmedabad<br>Gujarat, 382445</address>
+          <p><a href="tel:+919978655966">+91 9978655966</a></p>
+          <p><a href="mailto:ekipstransformers@gmail.com">ekipstransformers@gmail.com</a></p>
+        </div>
+        <div class="footer-col useful-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col products-col" data-aos="fade-up" data-aos-delay="150">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="product-control-transformer.html">Control Transformer</a></li>
+            <li><a href="product-line-choke.html">Line Choke</a></li>
+            <li><a href="product-three-phase-transformer.html">Three Phase Transformer</a></li>
+            <li><a href="product-buck-boost-transformer.html">Buck Boost Transformer</a></li>
+            <li><a href="product-lift-ups-transformer.html">Lift UPS Transformer</a></li>
+            <li><a href="product-inverter-transformer.html">Inverter Transformer</a></li>
+            <li><a href="products.html">And more...</a></li>
+          </ul>
+        </div>
+        <div class="footer-col about-col">
+          <h4>About</h4>
+          <p class="lead">Ekips Transformers specializes in manufacturing high-quality power and distribution transformers.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small>&copy; <span id="year"></span> Ekips Transformers — All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>

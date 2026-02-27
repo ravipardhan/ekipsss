@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Inquiry — Ekips Transformers</title>
+  <meta name="description" content="Send an inquiry to Ekips Transformers for product quotes, services, or general questions.">
+  <meta name="keywords" content="Inquiry, Quote, Ekips Transformers, Contact">
+  <link rel="icon" href="Gemini_Generated_Image_fmyokifmyokifmyo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-professional">
+  <header class="site-header" data-aos="fade-down">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.jpg" alt="Ekips Transformers Logo" class="header-logo">
+        <div class="brand-info">
+          <span class="brand-name">Ekips Transformers</span>
+          <span class="brand-tagline">Trust & Efficiency</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="industries.html">Industries</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="request-quote.html" class="btn-nav">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="booking-section" style="padding: 4rem 0;">
+      <div class="container">
+        <h2 style="text-align: center;">Send an Inquiry</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Fill out the form below to inquire about our products and services.</p>
+        
+        <form class="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-aos="fade-up">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Inquiry Subject" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Please describe your requirements..." required></textarea>
+          </div>
+
+          <input type="hidden" name="_subject" value="New Enquiry from Website!">
+          <input type="hidden" name="_next" value="thanks.html">
+          <button type="submit" class="btn-cta">Send Inquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col contact-col" data-aos="fade-up">
+          <h4>Contact Us</h4>
+          <address>
+            Vatva, Ahmedabad<br>
+            Gujarat, 382445
+          </address>
+          <p><a href="tel:+919978655966">+91 9978655966</a></p>
+          <p><a href="mailto:ekipstransformers@gmail.com">ekipstransformers@gmail.com</a></p>
+        </div>
+        <div class="footer-col useful-links" data-aos="fade-up" data-aos-delay="100">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col products-col">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="product-control-transformer.html">Control Transformer</a></li>
+            <li><a href="product-line-choke.html">Line Choke</a></li>
+            <li><a href="product-three-phase-transformer.html">Three Phase Transformer</a></li>
+            <li><a href="product-buck-boost-transformer.html">Buck Boost Transformer</a></li>
+            <li><a href="product-lift-ups-transformer.html">Lift UPS Transformer</a></li>
+            <li><a href="product-inverter-transformer.html">Inverter Transformer</a></li>
+            <li><a href="products.html">And more...</a></li>
+          </ul>
+        </div>
+        <div class="footer-col about-col" data-aos="fade-up" data-aos-delay="200">
+          <h4>About</h4>
+          <p class="lead">EKIPS Transformers, an ISO 9001:2015 & CE-certified company, is a leading manufacturer in the elevator and solar power sectors.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small>&copy; <span id="year"></span> Ekips Transformers — All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Request a Quote — Ekips Transformers</title>
+  <meta name="description" content="Send an inquiry to Ekips Transformers for product quotes, services, or general questions.">
+  <meta name="keywords" content="Inquiry, Quote, Ekips Transformers, Contact">
+  <link rel="icon" href="Gemini_Generated_Image_fmyokifmyokifmyo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-professional">
+  <header class="site-header" data-aos="fade-down">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.jpg" alt="Ekips Transformers Logo" class="header-logo">
+        <div class="brand-info">
+          <span class="brand-name">Ekips Transformers</span>
+          <span class="brand-tagline">Trust & Efficiency</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="industries.html">Industries</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="request-quote.html" class="btn-nav active">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="booking-section" style="padding: 4rem 0;">
+      <div class="container">
+        <h2 style="text-align: center;">Request a Quote</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 3rem;">Fill out the form below for a detailed quote on our products and services.</p>
+        
+        <form class="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-aos="fade-up" enctype="multipart/form-data"> <!-- TODO: Replace YOUR_FORM_ID -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="Full Name" placeholder="Your Full Name" required>
+            </div>
+            <div class="form-group">
+              <label for="company-name">Company Name</label>
+              <input type="text" id="company-name" name="Company Name" placeholder="Your Company Name" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="Email" placeholder="Your Email Address" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="Phone Number" placeholder="Your Phone Number" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="whatsapp-number">WhatsApp Number</label>
+              <input type="tel" id="whatsapp-number" name="WhatsApp Number" placeholder="Your WhatsApp Number (Optional)">
+            </div>
+            <div class="form-group">
+              <label for="product-required">Product Required</label>
+              <select id="product-required" name="Product Required" required>
+                  <option value="" disabled selected>Select a Product</option>
+                  <option value="Control Transformer">Control Transformer</option>
+                  <option value="Line Choke">Line Choke</option>
+                  <option value="Three Phase Transformer">Three Phase Transformer</option>
+                  <option value="Buck Boost Transformer">Buck Boost Transformer</option>
+                  <option value="Lift UPS 3-Phase Transformer">Lift UPS 3-Phase Transformer</option>
+                  <option value="UPS and Ard Transformer">UPS and Ard Transformer</option>
+                  <option value="Sine Wave Transformer">Sine Wave Transformer</option>
+                  <option value="Inverter Transformer">Inverter Transformer</option>
+                  <option value="Auto Transformer">Auto Transformer</option>
+                  <option value="Other">Other / Not Sure</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="capacity">Required Capacity (KVA)</label>
+              <input type="text" id="capacity" name="Required Capacity (KVA)" placeholder="e.g., 100 KVA">
+            </div>
+            <div class="form-group">
+              <label for="quantity">Quantity</label>
+              <input type="number" id="quantity" name="Quantity" placeholder="e.g., 5" min="1">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="input-voltage">Input Voltage</label>
+              <input type="text" id="input-voltage" name="Input Voltage" placeholder="e.g., 415V">
+            </div>
+            <div class="form-group">
+              <label for="output-voltage">Output Voltage</label>
+              <input type="text" id="output-voltage" name="Output Voltage" placeholder="e.g., 230V">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="delivery-location">Delivery Location</label>
+            <input type="text" id="delivery-location" name="Delivery Location" placeholder="City, State/Country">
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" rows="5" placeholder="Please describe any other requirements..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="tech-doc">Upload Technical Document (Optional)</label>
+            <div class="file-upload-wrapper">
+                <span class="file-upload-btn">Choose File...</span>
+                <input type="file" id="tech-doc" name="attachment" accept=".pdf,.doc,.docx,.jpg,.png">
+                <span class="file-upload-label">No file chosen</span>
+            </div>
+          </div>
+
+          <input type="hidden" name="_subject" value="New Detailed Quote Request from Website!">
+          <input type="hidden" name="_next" value="thanks.html">
+          <button type="submit" class="btn-cta">Submit Quote Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col contact-col" data-aos="fade-up">
+          <h4>Contact Us</h4>
+          <address>
+            Vatva, Ahmedabad<br>
+            Gujarat, 382445
+          </address>
+          <p><a href="tel:+919978655966">+91 9978655966</a></p>
+          <p><a href="mailto:ekipstransformers@gmail.com">ekipstransformers@gmail.com</a></p>
+        </div>
+        <div class="footer-col useful-links" data-aos="fade-up" data-aos-delay="100">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-col products-col" data-aos="fade-up" data-aos-delay="150">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="product-control-transformer.html">Control Transformer</a></li>
+            <li><a href="product-line-choke.html">Line Choke</a></li>
+            <li><a href="product-three-phase-transformer.html">Three Phase Transformer</a></li>
+            <li><a href="product-buck-boost-transformer.html">Buck Boost Transformer</a></li>
+            <li><a href="product-lift-ups-transformer.html">Lift UPS Transformer</a></li>
+            <li><a href="product-inverter-transformer.html">Inverter Transformer</a></li>
+            <li><a href="products.html">And more...</a></li>
+          </ul>
+        </div>
+        <div class="footer-col about-col" data-aos="fade-up" data-aos-delay="200">
+          <h4>About</h4>
+          <p class="lead">EKIPS Transformers, an ISO 9001:2015 & CE-certified company, is a leading manufacturer in the elevator and solar power sectors.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small>&copy; <span id="year"></span> Ekips Transformers — All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+
+    document.getElementById('tech-doc').addEventListener('change', function() {
+        var fileName = this.files[0] ? this.files[0].name : 'No file chosen';
+        this.parentElement.querySelector('.file-upload-label').textContent = fileName;
+    });
+  </script>
+</body>
+</html>

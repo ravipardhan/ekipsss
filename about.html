@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Ekips Transformers | Leading Transformer Manufacturer in Ahmedabad</title>
+  <meta name="description" content="Learn about Ekips Transformers, a leader in the transformer manufacturing industry based in Ahmedabad, Gujarat. Discover our commitment to quality and innovation.">
+  <meta name="keywords" content="About Ekips Transformers, Transformer Manufacturing, Electrical Engineering">
+  <link rel="icon" href="logo.jpg" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .about-content {
+      padding: 5rem 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+    .about-text h2 {
+      font-family: var(--font-serif);
+      font-size: 2.5rem;
+      color: var(--heading);
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .about-text p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+    }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+    .value-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 4px 15px var(--shadow);
+      transition: transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .value-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      border-color: var(--primary);
+    }
+    .value-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .value-card:hover::before {
+      transform: scaleX(1);
+    }
+    .value-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .value-card:hover i {
+      transform: scale(1.2) rotate(10deg);
+      color: var(--secondary);
+    }
+    .value-card h3 {
+      margin-bottom: 1rem;
+      color: var(--heading);
+    }
+
+    /* Image Wrapper Styling */
+    .about-image-wrapper {
+      position: relative;
+      z-index: 1;
+      padding: 10px;
+    }
+    .about-image-wrapper img {
+      position: relative;
+      z-index: 2;
+      border-radius: 10px;
+      transition: transform 0.5s ease;
+    }
+    .about-image-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      border: 2px solid var(--primary);
+      border-radius: 15px;
+      z-index: 1;
+      transition: transform 0.5s ease;
+    }
+    .about-image-wrapper:hover img {
+      transform: translate(-5px, -5px);
+    }
+    .about-image-wrapper:hover::before {
+      transform: translate(10px, 10px);
+    }
+
+    /* Floating Background Shapes */
+    .floating-shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: -1;
+      opacity: 0.4;
+    }
+    .shape-1 { width: 400px; height: 400px; background: var(--primary); top: -10%; left: -10%; opacity: 0.1; }
+    .shape-2 { width: 300px; height: 300px; background: var(--secondary); bottom: 10%; right: -5%; opacity: 0.1; }
+
+    /* Stats Section */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255,255,255,0.02);
+      border-radius: 15px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .stat-item h3 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    .stat-item p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body class="theme-professional">
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <a href="tel:+919978655966"><i class="fas fa-phone-alt"></i> +91 9978655966</a>
+        <a href="mailto:ekipstransformers@gmail.com"><i class="fas fa-envelope"></i> ekipstransformers@gmail.com</a>
+      </div>
+      <div class="top-bar-right">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://wa.me/919978655966" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.jpg" alt="Ekips Transformers Logo" class="header-logo">
+        <div class="brand-info">
+          <span class="brand-name">Ekips Transformers</span>
+          <span class="brand-tagline">Trust & Efficiency</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About Us</a>
+        <div class="nav-item">
+          <a href="products.html">Products <i class="fas fa-chevron-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="product-control-transformer.html">Control Transformer</a></li>
+            <li><a href="product-line-choke.html">Line Choke</a></li>
+            <li><a href="product-three-phase-transformer.html">Three Phase Transformer</a></li>
+            <li><a href="product-buck-boost-transformer.html">Buck Boost Transformer</a></li>
+            <li><a href="product-lift-ups-transformer.html">Lift UPS Transformer</a></li>
+            <li><a href="product-ard-ups-transformer.html">ARD & UPS Transformer</a></li>
+            <li><a href="product-inverter-transformer.html">Inverter Transformer</a></li>
+            <li><a href="product-isolation-transformer.html">Isolation Transformer</a></li>
+            <li><a href="products.html">View All Products</a></li>
+          </ul>
+        </div>
+        <a href="industries.html">Industries</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="request-quote.html" class="btn-nav">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-about" style="background-image: url('https://source.unsplash.com/1600x900/?factory,engineering,team');">
+      <div class="hero-content container">
+        <h1>About Ekips Transformers</h1>
+        <p class="hero-sub">Established on the ethos of trust and efficiency. We are an ISO 9001:2015 & CE-certified manufacturer dedicated to powering the future.</p>
+      </div>
+    </section>
+
+    <section class="about-content">
+      <div class="floating-shape shape-1"></div>
+      <div class="floating-shape shape-2"></div>
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text">
+            <h2>Who We Are</h2>
+            <p>EKIPS Transformers was established in the year 2016, on the ethos of trust and efficiency. We are an ISO 9001:2015 & CE-certified transformer manufacturing company. Our motto is to cater for our clients with utmost efficiency and graciousness. We are one of the fastest growing companies in the elevator sector and solar power sector.</p>
+            <p>EKIPS Transformers aims to supply magnetic products to multiple industries by providing a varied range of quality products to its customers through skilled manpower & world-class infrastructure. We believe that to achieve definite goals there is a strong need to foster teamwork and enhance leadership capabilities, and hereby we have our branch offices in Bangalore and Kerala in India.</p>
+            <p>The organization is supported by Mr. Bhumit Bhatt, a technically advanced entrepreneur with vast experience in transformer designing, believing in dedication and 100% customer satisfaction.</p>
+            <a href="contact.html" class="btn-cta">Contact Us Today</a>
+          </div>
+          <div class="about-image">
+            <div class="about-image-wrapper">
+              <img src="16.jpeg" alt="Ekips Transformers Team" style="box-shadow: 0 10px 30px rgba(0,0,0,0.15);" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="values-grid">
+          <div class="value-card">
+            <i class="fas fa-user-shield"></i>
+            <h3>Zero Defect Policy</h3>
+            <p>We believe in manufacturing zero-defect products using the best instrument materials and periodic modernization.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-clock"></i>
+            <h3>Cost-Effective & Fast</h3>
+            <p>Offering a wide scope of design and cost-effective transformers with insignificant lead time.</p>
+          </div>
+          <div class="value-card">
+            <i class="fas fa-star"></i>
+            <h3>Customer Satisfaction</h3>
+            <p>We are a mass manufacturer of Elevator and Solar Transformers with 100% customer satisfaction.</p>
+          </div>
+        </div>
+
+        <div class="product-expertise-section" style="margin-top: 5rem;">
+          <div style="text-align: center; margin-bottom: 3rem;">
+            <h2>Our Product Expertise</h2>
+            <p class="lead">Providing solutions for both standard and custom design transformers.</p>
+          </div>
+          <div class="expertise-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div class="expertise-item" style="background: var(--bg-alt); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Control Transformers</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">Used to step down voltage to power control devices, providing a safer environment for technicians. Ideal for HVAC, relays, and contactors.</p>
+            </div>
+            <div class="expertise-item" style="background: var(--bg-alt); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Line Chokes</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">Provide protection against overvoltages and reduce harmonic distortion of the current produced by drives.</p>
+            </div>
+            <div class="expertise-item" style="background: var(--bg-alt); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Three Phase Transformers</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">Passive machines that transfer electrical energy between circuits, stepping voltage up or down without altering frequency.</p>
+            </div>
+            <div class="expertise-item" style="background: var(--bg-alt); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Buck Boost Transformers</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">Steps input voltage up or down to provide rectified voltage for connected devices or machines.</p>
+            </div>
+            <div class="expertise-item" style="background: var(--bg-alt); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Lift UPS Transformers</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">Multi-secondary type feeding door controls, braking, and ARD, operating with high frequency & 3-phase low voltage mode.</p>
+            </div>
+            <div class="expertise-item" style="background: var(--bg-alt); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">UPS and ARD Transformers</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">Step up AC voltage levels, protect UPS from load disruptions, and provide galvanic isolation.</p>
+            </div>
+            <div class="expertise-item" style="background: var(--bg-alt); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Sine Wave Transformers</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">Associated with inverters to convert DC to AC, producing a smooth repetitive oscillation similar to conventional power.</p>
+            </div>
+            <div class="expertise-item" style="background: var(--bg-alt); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Inverter Transformers</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">Converts power from a DC source into AC power, used in voltage-fed and current-fed inverter applications.</p>
+            </div>
+            <div class="expertise-item" style="background: var(--bg-alt); padding: 1.5rem; border-radius: 10px; border: 1px solid var(--border);">
+              <h4 style="color: var(--primary); margin-bottom: 0.5rem;">Auto Transformers</h4>
+              <p style="font-size: 0.95rem; color: var(--text-muted);">Transformers with a single winding acting as both primary and secondary, offering a compact voltage conversion solution.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col contact-col">
+          <h4>Contact Us</h4>
+          <address>
+            Vatva, Ahmedabad<br>
+            Gujarat, 382445
+          </address>
+          <p>
+            <a href="tel:+919978655966">+91 9978655966</a>
+          </p>
+          <p><a href="mailto:ekipstransformers@gmail.com">ekipstransformers@gmail.com</a></p>
+        </div>
+
+        <div class="footer-col useful-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col products-col">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="product-control-transformer.html">Control Transformer</a></li>
+            <li><a href="product-line-choke.html">Line Choke</a></li>
+            <li><a href="product-three-phase-transformer.html">Three Phase Transformer</a></li>
+            <li><a href="product-buck-boost-transformer.html">Buck Boost Transformer</a></li>
+            <li><a href="product-lift-ups-transformer.html">Lift UPS Transformer</a></li>
+            <li><a href="product-inverter-transformer.html">Inverter Transformer</a></li>
+            <li><a href="products.html">And more...</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col about-col">
+          <h4>About</h4>
+          <p class="lead">EKIPS Transformers, an ISO 9001:2015 & CE-certified company, is a leading manufacturer in the elevator and solar power sectors.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <small>&copy; <span id="year"></span> Ekips Transformers — All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <div class="fixed-buttons">
+    <a href="https://wa.me/919978655966" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+919978655966" class="call-btn"><i class="fas fa-phone"></i></a>
+  </div>
+</body>
+</html>

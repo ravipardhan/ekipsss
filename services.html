@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products & Services — Ekips Transformers</title>
+  <meta name="description" content="Explore the range of products and services from Ekips Transformers, including Power, Distribution, and Specialty Transformers, plus repair and maintenance services.">
+  <meta name="keywords" content="Transformer Products, Transformer Services, Power Transformers, Custom Winding, Transformer Repair">
+  <link rel="icon" href="Gemini_Generated_Image_fmyokifmyokifmyo.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Extra decoration for services page */
+    /* Animations */
+    @keyframes float-slow {
+      0% { transform: translate(0, 0); }
+      50% { transform: translate(0, -20px); }
+      100% { transform: translate(0, 0); }
+    }
+    @keyframes pulse-glow {
+      0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+      70% { box-shadow: 0 0 0 20px rgba(212, 175, 55, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+    }
+    @keyframes gradient-text {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    @keyframes rubberBand {
+      0% { transform: scale3d(1, 1, 1); }
+      30% { transform: scale3d(1.25, 0.75, 1); }
+      40% { transform: scale3d(0.75, 1.25, 1); }
+      50% { transform: scale3d(1.15, 0.85, 1); }
+      65% { transform: scale3d(0.95, 1.05, 1); }
+      75% { transform: scale3d(1.05, 0.95, 1); }
+      100% { transform: scale3d(1, 1, 1); }
+    }
+
+    .services-section {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Hero Enhancements */
+    .services-hero {
+      position: relative;
+      overflow: hidden;
+    }
+    .services-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 100%);
+      z-index: 1;
+    }
+    .services-hero .hero-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 3rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .services-hero h1 {
+      background: linear-gradient(to right, #fff, #d4af37, #fff);
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradient-text 5s ease infinite;
+    }
+
+    /* Service Card Enhancements */
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      background: rgba(255, 255, 255, 0.02);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .service-card:hover {
+      transform: translateY(-15px) scale(1.03);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+      border-color: var(--primary);
+      z-index: 10;
+    }
+    .service-card-img img {
+      transition: transform 0.8s ease;
+    }
+    .service-card:hover .service-card-img img {
+      transform: scale(1.15) rotate(2deg);
+    }
+    .service-icon-float {
+      animation: float-slow 4s ease-in-out infinite;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .service-card:hover .service-icon-float {
+      background-color: var(--secondary);
+      transform: rotate(360deg) scale(1.2);
+      animation: none;
+    }
+
+    /* Background Blobs */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      z-index: -1;
+      opacity: 0.3;
+      animation: float-slow 10s infinite alternate;
+    }
+    .blob-1 { top: 0; left: 0; width: 500px; height: 500px; background: var(--primary); }
+    .blob-2 { bottom: 0; right: 0; width: 600px; height: 600px; background: var(--secondary); animation-delay: -5s; }
+    .blob-3 { top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; background: #5856d6; opacity: 0.15; }
+
+    /* Process Section Enhancements */
+    .process-step {
+      position: relative;
+      padding: 2rem;
+      border-radius: 15px;
+      transition: background 0.3s;
+    }
+    .process-step:hover {
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .process-icon {
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      background: rgba(212, 175, 55, 0.1);
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+      transition: all 0.5s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .process-step:hover .process-icon {
+      transform: scale(1.1) rotate(10deg);
+      background: var(--primary);
+      color: #fff;
+      box-shadow: 0 0 0 10px rgba(212, 175, 55, 0.2);
+      animation: pulse-glow 2s infinite;
+    }
+
+    /* Why Choose Hover */
+    .choice-item:hover i {
+      animation: rubberBand 1s;
+    }
+  </style>
+</head>
+<body class="theme-professional">
+  <header class="site-header" data-aos="fade-down">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html">
+        <img src="logo.jpg" alt="Ekips Transformers Logo" class="header-logo">
+        <div class="brand-info">
+          <span class="brand-name">Ekips Transformers</span>
+          <span class="brand-tagline">Trust & Efficiency</span>
+        </div>
+      </a>
+      <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="industries.html">Industries</a>
+        <a href="why-choose-us.html">Why Choose Us</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        <a href="request-quote.html" class="btn-nav">Request a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <header class="services-hero" id="services-hero-bg" style="background-image: url('https://source.unsplash.com/1600x900/?technology,engineering');">
+      <div class="hero-content" data-aos="fade-up">
+        <h1>Our Products & Services</h1>
+        <p class="lead">We offer a comprehensive range of transformer products and services, engineered for performance and reliability. From large-scale power transformers to custom-wound coils, we have the solution for you.</p>
+        <div class="hero-buttons" style="margin-top: 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+          <a href="#expertise" class="btn-cta">Explore Our Offerings</a>
+          <a href="assets/ekips-transformers-catalog.pdf" class="btn-secondary on-dark" download>Download Catalog</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- New Expertise Section -->
+    <section class="services-section" id="expertise">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 3rem;" data-aos="fade-up">
+          <h2>Our Core Offerings</h2>
+          <p class="lead">Professional transformer solutions tailored for your industry.</p>
+        </div>
+        
+        <div class="services-grid">
+          <!-- 1. Control Transformers -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="100">
+            <div class="service-card-img">
+              <img src="Control xmer.jpeg" alt="Control Transformer" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-cogs"></i></div>
+            <div class="service-card-content">
+              <h3>Control Transformers</h3>
+              <p>A transformer that is used to step down the voltage to power the control devices of a circuit or machine. The reduced voltage provides a much safer environment for technicians working on the equipment.</p>
+              <a href="request-quote.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- 2. Line Chokes -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="150">
+            <div class="service-card-img">
+              <img src="2 (2).jpeg" alt="Line Choke" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-wave-square"></i></div>
+            <div class="service-card-content">
+              <h3>Line Chokes</h3>
+              <p>Line chokes are used to provide improved protection against overvoltages on the line supply and to reduce harmonic distortion of the current produced by the drive.</p>
+              <a href="request-quote.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- 3. Three Phase Transformers -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="200">
+            <div class="service-card-img">
+              <img src="Three phassw xmer.jpeg" alt="Three Phase Transformer" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-bolt"></i></div>
+            <div class="service-card-content">
+              <h3>Three Phase Transformers</h3>
+              <p>Three-phase transformers are passive machines that pass electrical energy between circuits. In the secondary circuit, a magnetic flux induces an electromotive force (emf).</p>
+              <a href="request-quote.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- 4. Buck Boost Transformers -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="250">
+            <div class="service-card-img">
+              <img src="Buckboost xmer.jpeg" alt="Buck Boost Transformer" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-level-up-alt"></i></div>
+            <div class="service-card-content">
+              <h3>Buck Boost Transformers</h3>
+              <p>A buck-boost transformer works by taking input voltage from the primary side of the transformer and stepping it up or down – depending on the preferred configuration.</p>
+              <a href="request-quote.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- 5. Lift UPS Transformers -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="300">
+            <div class="service-card-img">
+              <img src="5.1.jpeg" alt="Lift UPS Transformer" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-arrow-up"></i></div>
+            <div class="service-card-content">
+              <h3>Lift UPS Transformers</h3>
+              <p>These ranges are with multi secondary type which feeds for Door closure controls, DC Braking, SMPS module, Illumination, ARD (Auto Rescue Device) which operates with high frequency & 3 phase low voltage mode.</p>
+              <a href="request-quote.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- 6. UPS and Ard Transformers -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="350">
+            <div class="service-card-img">
+              <img src="6 (2).jpeg" alt="UPS and ARD Transformer" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-battery-full"></i></div>
+            <div class="service-card-content">
+              <h3>UPS and Ard Transformers</h3>
+              <p>The power flows via the rectifier, inverter and transformer to the output, with the transformer used to step up the AC voltage levels, protect the UPS from load disruptions and provide galvanic isolation. Transformerless UPS operate in the same way, apart from one key difference.</p>
+              <a href="request-quote.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- 7. Sine Wave Transformers -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="400">
+            <div class="service-card-img">
+              <img src="5 (2).jpeg" alt="Sine Wave Transformer" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-sliders-h"></i></div>
+            <div class="service-card-content">
+              <h3>Sine Wave Transformers</h3>
+              <p>An inverter is an electronic device that converts direct current (DC) to alternating current (AC). A sine wave is a continuous wave that describes a smooth repetitive oscillation.</p>
+              <a href="request-quote.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- 8. Inverter Transformers -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="450">
+            <div class="service-card-img">
+              <img src="4 (2).jpeg" alt="Inverter Transformer" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-solar-panel"></i></div>
+            <div class="service-card-content">
+              <h3>Inverter Transformers</h3>
+              <p>In power conversion applications an inverter is an electronic transformer which converts power from a Direct Current (D.C) source into Alternating Current (A.C) power.</p>
+              <a href="request-quote.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- 9. Auto Transformers -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="500">
+            <div class="service-card-img">
+              <img src="1 (2).jpeg" alt="Auto Transformer" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-circle-notch"></i></div>
+            <div class="service-card-content">
+              <h3>Auto Transformers</h3>
+              <p>An autotransformer is an electrical transformer with only one winding. The "auto" prefix refers to the single coil acting alone, not to any kind of automatic mechanism.</p>
+              <a href="request-quote.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+
+          <!-- 10. Isolation Transformer -->
+          <div class="service-card" data-aos="zoom-in-up" data-aos-delay="550">
+            <div class="service-card-img">
+              <img src="Isolation xmer.jpeg" alt="Isolation Transformer" loading="lazy">
+            </div>
+            <div class="service-icon-float"><i class="fas fa-shield-alt"></i></div>
+            <div class="service-card-content">
+              <h3>Isolation Transformer</h3>
+              <p>Ensures complete galvanic isolation for noise reduction and safety, protecting sensitive electronic equipment from voltage spikes and line disturbances.</p>
+              <a href="product-isolation-transformer.html" class="btn-more-info" style="margin-top: auto;">Enquire Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section class="process-section">
+      <div class="container">
+        <h2 data-aos="fade-down">Our Work Process</h2>
+        <p class="lead" data-aos="fade-up">How we deliver excellence from start to finish.</p>
+        
+        <div class="process-grid">
+          <div class="process-step" data-aos="zoom-in" data-aos-delay="100">
+            <div class="process-icon"><i class="fas fa-comments"></i></div>
+            <h4>1. Consultation</h4>
+            <p>We discuss your requirements and technical specifications.</p>
+          </div>
+          <div class="process-step" data-aos="zoom-in" data-aos-delay="200">
+            <div class="process-icon"><i class="fas fa-drafting-compass"></i></div>
+            <h4>2. Design</h4>
+            <p>Our engineers create precise designs and blueprints.</p>
+          </div>
+          <div class="process-step" data-aos="zoom-in" data-aos-delay="300">
+            <div class="process-icon"><i class="fas fa-industry"></i></div>
+            <h4>3. Manufacturing</h4>
+            <p>We manufacture using high-grade materials and machinery.</p>
+          </div>
+          <div class="process-step" data-aos="zoom-in" data-aos-delay="400">
+            <div class="process-icon"><i class="fas fa-vial"></i></div>
+            <h4>4. Quality Check</h4>
+            <p>Rigorous testing ensures the final product meets standards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose -->
+    <section class="why-choose">
+      <div class="container">
+        <h2>Why Choose Ekips Transformers?</h2>
+        <p class="lead">We are committed to providing superior service quality. Here’s what sets us apart:</p>
+        <div class="choice-grid">
+          <div class="choice-item" data-aos="flip-left" data-aos-delay="100">
+            <i class="fas fa-check-circle"></i>
+            <h3>ISO Certified Quality</h3>
+            <p>Our manufacturing processes adhere to strict ISO quality standards for consistent excellence.</p>
+          </div>
+          <div class="choice-item" data-aos="flip-left" data-aos-delay="200">
+            <i class="fas fa-user-shield"></i>
+            <h3>Experienced Engineers</h3>
+            <p>Our team of skilled engineers brings decades of experience to every project.</p>
+          </div>
+          <div class="choice-item" data-aos="flip-left" data-aos-delay="300">
+            <i class="fas fa-shipping-fast"></i>
+            <h3>On-Time Delivery</h3>
+            <p>We pride ourselves on our efficient production schedules and reliable delivery commitments.</p>
+          </div>
+          <div class="choice-item" data-aos="flip-left" data-aos-delay="400">
+            <i class="fas fa-cogs"></i>
+            <h3>Customized & Flexible Solutions</h3>
+            <p>We deliver customized solutions tailored to each client’s requirements.</p>
+          </div>
+          <div class="choice-item" data-aos="flip-left" data-aos-delay="500">
+            <i class="fas fa-tools"></i>
+            <h3>After-Sales Support</h3>
+            <p>We offer comprehensive after-sales service and support to ensure optimal performance.</p>
+          </div>
+          <div class="choice-item" data-aos="flip-left" data-aos-delay="600">
+            <i class="fas fa-handshake"></i>
+            <h3>Customer-Centric Approach</h3>
+            <p>We work closely with our clients to build long-term, trusted partnerships.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA + Contact -->
+    <section class="testimonial-section">
+      <div class="container">
+        <h2>What Our Customers Say</h2>
+        <p class="lead">We take pride in our work. Here's what our clients say.</p>
+        <div class="testimonial-grid">
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-content">
+              <p>"The quality and reliability of Ekips' distribution transformers are unmatched. They have significantly improved our network's stability."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="360_F_367709147_W4Q2pRjMcz7jUkuH4e1BIhmtCDceu3FH.jpg" alt="R. K. Sharma">
+              <div class="author-details">
+                <strong>R. Sharma</strong>
+                <span>Project Manager, Energy Corp</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-content">
+              <p>"Their team designed a custom furnace transformer that perfectly fit our unique requirements. The performance has been flawless."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="happy-brunette-woman-confident-with-natural-hair-feeling-satisfied_482257-87906.jpg" alt="Priya Singh">
+              <div class="author-details">
+                <strong>P. Singh</strong>
+                <span>Head of Engineering, Steel Plant</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-content">
+              <p>"The after-sales support and maintenance service from Ekips Transformers is exceptional. They are always responsive and professional."</p>
+            </div>
+            <div class="testimonial-author">
+              <img src="11111 images.jpg" alt="Amit Kumar">
+              <div class="author-details">
+                <strong>A. Kumar</strong>
+                <span>Operations Chief, Renewables</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cta-section" data-aos="zoom-in">
+      <div class="container">
+        <h2>Have a Project in Mind?</h2>
+        <p>Let's discuss your transformer requirements. Contact us for a personalized quote.</p>
+        <a href="contact.html" class="btn-cta">Contact Us</a>
+      </div>
+    </section>
+    <section class="booking-section">
+    <div class="container">
+      <h2>Quick Enquiry</h2>
+      <p>Fill out the form below to get in touch with us.</p>
+      <form class="booking-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" data-aos="zoom-in-up"> <!-- Replace with your Formspree ID -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="pickup">Subject</label>
+            <input type="text" id="pickup" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <label for="drop">Message</label>
+            <input type="text" id="drop" name="message" placeholder="Your Message" required>
+          </div>
+        </div>
+        <input type="hidden" name="_subject" value="New Enquiry from Services Page!">
+        <input type="hidden" name="_next" value="thanks.html">
+        <button type="submit" class="btn-cta">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+  </main>
+  
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col contact-col" data-aos="fade-up">
+          <h4>Contact Us</h4>
+          <address>
+            Vatva, Ahmedabad<br>
+            Gujarat, 382445
+          </address>
+          <p>
+            <a href="tel:+919978655966">+91 9978655966</a>
+          </p>
+          <p><a href="mailto:ekipstransformers@gmail.com">ekipstransformers@gmail.com</a></p>
+        </div>
+
+        <div class="footer-col useful-links" data-aos="fade-up" data-aos-delay="100">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col products-col" data-aos="fade-up" data-aos-delay="150">
+          <h4>Our Products</h4>
+          <ul>
+            <li><a href="product-control-transformer.html">Control Transformer</a></li>
+            <li><a href="product-line-choke.html">Line Choke</a></li>
+            <li><a href="product-three-phase-transformer.html">Three Phase Transformer</a></li>
+            <li><a href="product-buck-boost-transformer.html">Buck Boost Transformer</a></li>
+            <li><a href="product-lift-ups-transformer.html">Lift UPS Transformer</a></li>
+            <li><a href="product-inverter-transformer.html">Inverter Transformer</a></li>
+            <li><a href="products.html">And more...</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col about-col" data-aos="fade-up" data-aos-delay="200">
+          <h4>About</h4>
+          <p class="lead">EKIPS Transformers, an ISO 9001:2015 & CE-certified company, is a leading manufacturer in the elevator and solar power sectors.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <small>&copy; <span id="year"></span> Ekips Transformers — All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+
+  <div class="fixed-buttons">
+    <a href="https://wa.me/919978655966" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+919978655966" class="call-btn"><i class="fas fa-phone"></i></a>
+  </div>
+</body>
+</html>
